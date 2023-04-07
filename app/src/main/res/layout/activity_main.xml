@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BotonEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/NoCuenta_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="N° Cuenta"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:maxLength="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Correo_Text" />
+
+        <EditText
+            android:id="@+id/Correo_Text"
+            android:layout_width="301dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Correo Electronico"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FechaNac_Text" />
+
+        <TextView
+            android:id="@+id/Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulario"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+
+        <EditText
+            android:id="@+id/Apellidos_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Apellidos"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombre_Text" />
+
+        <EditText
+            android:id="@+id/FechaNac_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Fecha de Nacimiento"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:datePickerMode = "spinner"
+            android:calendarViewShown="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Apellidos_Text" />
+
+
+        <EditText
+            android:id="@+id/nombre_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Nombre(s)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titulo"
+            app:layout_constraintVertical_bias="0.865" />
+
+        <Spinner
+            android:id="@+id/listview_carreras"
+            android:layout_width="275dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.272"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NoCuenta_Text" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>
