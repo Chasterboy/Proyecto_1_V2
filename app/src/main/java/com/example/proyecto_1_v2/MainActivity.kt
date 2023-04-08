@@ -4,6 +4,7 @@ package com.example.proyecto_1_v2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     private var diaSeleccionado = 0
     private var mesSeleccionado = 0
     private var anioSeleccionado = 0
+    private var carreraSeleccionada = "" // variable para almacenar la carrera seleccionada
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +34,14 @@ class MainActivity : AppCompatActivity() {
         val carreras = resources.getStringArray(R.array.carreras)
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, carreras)
         binding.listviewCarreras.adapter = adapter
+
+
+        binding.listviewCarreras.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                carreraSeleccionada = parent?.getItemAtPosition(position).toString()
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
 
     }
 
@@ -93,10 +104,13 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-       /* if (Carrera.isEmpty()) {
-            binding..error = "Ingrese tu nombre"
 
-        }*/
+        println("Carrera selecionada es: $carreraSeleccionada -----------------------\n")
+        if (carreraSeleccionada.isEmpty()) {
+            Toast.makeText(this, "Seleccione una carrera", Toast.LENGTH_SHORT).show()
+        } else {
+            // acciones a realizar con la carrera seleccionada
+        }
         if (fecha.isEmpty()) {
             Toast.makeText(this, "Ingrese su fecha de nacimiento", Toast.LENGTH_SHORT).show()
 
@@ -104,4 +118,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    //para validar correo
+
 }
+
