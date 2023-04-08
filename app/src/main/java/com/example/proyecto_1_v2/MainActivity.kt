@@ -18,108 +18,109 @@ class MainActivity : AppCompatActivity() {
     private var anioSeleccionado = 0
     private var carreraSeleccionada = "" // variable para almacenar la carrera seleccionada
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
 
-        //condiciones del splash
-
-
+        // Inflar el layout de la actividad usando DataBindingUtil
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.FechaNacText.setOnClickListener{showDatePickerDialog()}
+        // Configurar el listener para el botón de fecha de nacimiento
+        binding.FechaNacText.setOnClickListener { showDatePickerDialog() }
 
-        setContentView(binding.root)
+        // Configurar el adaptador para la lista de carreras
         val carreras = resources.getStringArray(R.array.carreras)
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, carreras)
         binding.listviewCarreras.adapter = adapter
 
-
+        // Configurar el listener para el spinner de carreras
         binding.listviewCarreras.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                // Almacenar la carrera seleccionada
                 carreraSeleccionada = parent?.getItemAtPosition(position).toString()
             }
+
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
-
     }
 
-    private fun showDatePickerDialog(){
+    // Función para mostrar el diálogo de selección de fecha
+    private fun showDatePickerDialog() {
         val datePicker = DatePickerFragment { day, month, year -> onDateSelected(day, month, year) }
         datePicker.show(supportFragmentManager, "FechaNac")
     }
 
-    fun onDateSelected(day:Int, month:Int, year:Int){
+    // Función para actualizar la fecha seleccionada en el EditText
+    fun onDateSelected(day: Int, month: Int, year: Int) {
         diaSeleccionado = day
         mesSeleccionado = month + 1
         anioSeleccionado = year
         binding.FechaNacText.setText("$day / $mesSeleccionado  / $year")
     }
+
+    // Función para validar una dirección de correo electrónico
     fun validarCorreoElectronico(correo: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(correo).matches()
     }
+
+    // Función que se llama al presionar el botón "Enviar"
     fun BEnviar(view: View) {
+        // Obtener los datos ingresados en los campos de texto
         val email = binding.CorreoText.text.toString()
         val nombre = binding.nombreText.text.toString()
         val apellido = binding.ApellidosText.text.toString()
         val Ncuenta = binding.NoCuentaText.text.toString()
-//        val Carrera = findViewById<Spinner>(R.id.mi_spinner)
-        var fecha  = binding.FechaNacText.text.toString()
+        var fecha = binding.FechaNacText.text.toString()
 
-        println("Fecha de nacmiento es: $fecha ------------------------------------------------------------------------------")
+        // Imprimir la fecha de nacimiento obtenida (para fines de prueba)
+        println("Fecha de nacimiento es: $fecha")
 
+        // Validar si el campo de correo electrónico está vacío
         if (email.isEmpty()) {
             binding.CorreoText.error = "Ingrese un correo electrónico"
-
         } else {
-            if(validarCorreoElectronico(email)){
-                //incresar acciones a realizar
-            }else{
-
-                binding.CorreoText.error = "Correo electrónico no valido"
-
+            // Si el campo de correo electrónico no está vacío, validar si es válido
+            if (validarCorreoElectronico(email)) {
+                // Si el correo electrónico es válido, agregar acciones a realizar aquí
+            } else {
+                // Si el correo electrónico no es válido, mostrar un mensaje de error
+                binding.CorreoText.error = "Correo electrónico no válido"
             }
-
         }
 
+        // Validar si el campo de nombre está vacío
         if (nombre.isEmpty()) {
             binding.nombreText.error = "Ingrese tu nombre"
-
         }
+
+        // Validar si el campo de apellido está vacío
         if (apellido.isEmpty()) {
             binding.ApellidosText.error = "Ingrese tus apellidos"
-
         }
+
+        // Validar si el campo de número de cuenta está vacío
         if (Ncuenta.isEmpty()) {
-            binding.NoCuentaText.error = "Ingrese tu N° de cuenta "
-
-        }else{
-            if(Ncuenta.length == 9){
-                //incresar acciones a realizar
-            }else{
-
-                binding.NoCuentaText.error = "N° de cuenta no valido "
-
+            binding.NoCuentaText.error = "Ingrese tu N° de cuenta"
+        } else {
+            // Si el campo de número de cuenta no está vacío, validar si tiene una longitud válida
+            if (Ncuenta.length == 9) {
+                // Si el número de cuenta es válido, agregar acciones a realizar aquí
+            } else {
+                // Si el número de cuenta no es válido, mostrar un mensaje de error
+                binding.NoCuentaText.error = "N° de cuenta no válido"
             }
-
         }
 
-        println("Carrera selecionada es: $carreraSeleccionada -----------------------\n")
+        // Validar si se ha seleccionado una carrera
         if (carreraSeleccionada.isEmpty()) {
             Toast.makeText(this, "Seleccione una carrera", Toast.LENGTH_SHORT).show()
         } else {
-            // acciones a realizar con la carrera seleccionada
+            // Si se ha seleccionado una carrera, agregar acciones a realizar aquí
         }
+
+        // Validar si el campo de fecha de nacimiento está vacío
         if (fecha.isEmpty()) {
             Toast.makeText(this, "Ingrese su fecha de nacimiento", Toast.LENGTH_SHORT).show()
-
         }
-
-
     }
-
-    //para validar correo
-
 }
 
