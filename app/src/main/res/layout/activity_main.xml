@@ -10,52 +10,21 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/NoCuenta_Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="N° Cuenta"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:inputType="number"
-            android:digits="0123456789"
-            android:maxLength="9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Correo_Text" />
-
-        <EditText
-            android:id="@+id/Correo_Text"
-            android:layout_width="301dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Correo Electronico"
-            android:inputType="textPersonName"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FechaNac_Text" />
 
         <TextView
             android:id="@+id/Titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Formulario"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.455"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.022" />
+            android:layout_width="370dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="36dp"
+            android:text="Ingrese los datos en el campo correspondiente, no dejar los campos en blanco"
+            android:textColor="#000000"
 
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/Apellidos_Text"
@@ -63,44 +32,44 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Apellidos"
-            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:textSize="14dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.149"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nombre_Text" />
 
+
         <EditText
             android:id="@+id/FechaNac_Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:calendarViewShown="false"
             android:clickable="false"
+            android:datePickerMode="spinner"
             android:ems="10"
             android:focusable="false"
             android:hint="Fecha de Nacimiento"
             android:inputType="textPersonName"
-            android:textSize="14sp"
+            android:textSize="14dp"
             android:textStyle="bold"
-            android:datePickerMode = "spinner"
-            android:calendarViewShown="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.149"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Apellidos_Text" />
 
-
         <EditText
             android:id="@+id/nombre_Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Nombre(s)"
-            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.149"
@@ -112,22 +81,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enviar"
+            android:onClick="BEnviar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Titulo"
-            app:layout_constraintVertical_bias="0.865" />
+            app:layout_constraintTop_toBottomOf="@+id/listview_carreras"
+            app:layout_constraintVertical_bias="0.598" />
 
         <Spinner
             android:id="@+id/listview_carreras"
             android:layout_width="275dp"
             android:layout_height="78dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="28dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.272"
+            app:layout_constraintHorizontal_bias="0.264"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NoCuenta_Text" />
+            app:layout_constraintTop_toBottomOf="@+id/NoCuenta_Text"
+            />
 
         <TextView
             android:id="@+id/textCarr"
@@ -140,6 +110,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/NoCuenta_Text"
             app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/CorreoText"
+            android:layout_width="303dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Correo Electronico"
+            android:inputType="textEmailAddress"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FechaNac_Text" />
+
+        <EditText
+            android:id="@+id/NoCuenta_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="N° Cuenta"
+            android:inputType="number"
+            android:maxLength="9"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CorreoText" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
