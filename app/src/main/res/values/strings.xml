@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Formulario</string>
+    <string name="Titulo">Ingrese los datos en el campo correspondiente, no dejar los campos en blanco</string>
 </resources>

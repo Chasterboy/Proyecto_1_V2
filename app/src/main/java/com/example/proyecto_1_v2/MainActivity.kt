@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         diaSeleccionado = day
         mesSeleccionado = month + 1
         anioSeleccionado = year
-        binding.FechaNacText.setText("$day / $mesSeleccionado  / $year")
+        binding.FechaNacText.setText("$day/$mesSeleccionado/$year")
     }
 
     // Función para validar una dirección de correo electrónico

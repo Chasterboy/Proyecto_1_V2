@@ -40,7 +40,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Ingrese los datos en el campo correspondiente, no dejar los campos en blanco"
+                        android:text="@string/Titulo"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
