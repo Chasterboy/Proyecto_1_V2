@@ -1,6 +1,7 @@
 package com.example.proyecto_1_v2
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         // Inflar el layout de la actividad usando DataBindingUtil
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -71,35 +73,48 @@ class MainActivity : AppCompatActivity() {
         val Ncuenta = binding.NoCuentaText.text.toString()
         var fecha = binding.FechaNacText.text.toString()
 
+        val camposFaltantes = mutableListOf<String>()
+
+
+
         // Imprimir la fecha de nacimiento obtenida (para fines de prueba)
-        println("Fecha de nacimiento es: $fecha")
+        //println("Fecha de nacimiento es: $fecha")
 
         // Validar si el campo de correo electrónico está vacío
         if (email.isEmpty()) {
             binding.CorreoText.error = "Ingrese un correo electrónico"
+            camposFaltantes.add("CorreoElectronico")
+
         } else {
             // Si el campo de correo electrónico no está vacío, validar si es válido
             if (validarCorreoElectronico(email)) {
                 // Si el correo electrónico es válido, agregar acciones a realizar aquí
+
             } else {
                 // Si el correo electrónico no es válido, mostrar un mensaje de error
                 binding.CorreoText.error = "Correo electrónico no válido"
+                camposFaltantes.add("CorreoElectronico")
             }
         }
 
         // Validar si el campo de nombre está vacío
         if (nombre.isEmpty()) {
             binding.nombreText.error = "Ingrese tu nombre"
+            camposFaltantes.add("Nombre")
         }
 
         // Validar si el campo de apellido está vacío
         if (apellido.isEmpty()) {
             binding.ApellidosText.error = "Ingrese tus apellidos"
+            camposFaltantes.add("Apellido")
+
         }
 
         // Validar si el campo de número de cuenta está vacío
         if (Ncuenta.isEmpty()) {
             binding.NoCuentaText.error = "Ingrese tu N° de cuenta"
+            camposFaltantes.add("numCuenta")
+
         } else {
             // Si el campo de número de cuenta no está vacío, validar si tiene una longitud válida
             if (Ncuenta.length == 9) {
@@ -107,12 +122,16 @@ class MainActivity : AppCompatActivity() {
             } else {
                 // Si el número de cuenta no es válido, mostrar un mensaje de error
                 binding.NoCuentaText.error = "N° de cuenta no válido"
+                camposFaltantes.add("numCuenta")
+
             }
         }
 
         // Validar si se ha seleccionado una carrera
         if (carreraSeleccionada.isEmpty()) {
             Toast.makeText(this, "Seleccione una carrera", Toast.LENGTH_SHORT).show()
+            camposFaltantes.add("CarreraSeleccionada")
+
         } else {
             // Si se ha seleccionado una carrera, agregar acciones a realizar aquí
         }
@@ -120,6 +139,28 @@ class MainActivity : AppCompatActivity() {
         // Validar si el campo de fecha de nacimiento está vacío
         if (fecha.isEmpty()) {
             Toast.makeText(this, "Ingrese su fecha de nacimiento", Toast.LENGTH_SHORT).show()
+            camposFaltantes.add("fechanacimiento")
+
+        }
+        //println("---------->$camposFaltantes<------------------")
+        //Condicion para verificar si todos los datos son correctos
+        if (!camposFaltantes.isNotEmpty()) {
+            //val mensaje = "todos los campos se llenaron adecuadamente "
+            //Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ResultActivity::class.java)
+            val bundle = Bundle()
+
+            bundle.putString("nombre", nombre)
+            bundle.putString("apellido", apellido)
+            bundle.putString("email", email)
+            bundle.putString("NCuenta", Ncuenta)
+            bundle.putString("FechaNaci", fecha)
+            bundle.putString("Carrera", carreraSeleccionada)
+
+            intent.putExtras(bundle)
+
+
+            startActivity(intent)
         }
     }
 }

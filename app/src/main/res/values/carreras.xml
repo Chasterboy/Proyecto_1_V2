@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="carreras">
-        <item>Ingeniería Civil</item>
-        <item>Ingeniería Eléctrica Electrónica</item>
-        <item>Ingeniería Industrial</item>
-        <item>Ingeniería en Computación</item>
-        <item>Ingeniería en Telecomunicaciones</item>
-        <item>Ingeniería Mecánica</item>
-        <item>Ingeniería Mecatrónica</item>
-        <item>Ingeniería Petrolera</item>
-        <item>Ingeniería Aeroespacial</item>
-        <item>Ingeniería Geomática</item>
-        <item>Ingeniería Ambiental</item>
-        <item>Ingeniería Geofísica</item>
-        <item>Ingeniería Geológica</item>
-        <item>Ingeniería de Minas y Metalurgia</item>
-        <item>Ingeniería en Sistemas Biomédicos</item>
+        <item> @string/IngCivil </item>
+        <item> @string/IngEE </item>
+        <item> @string/IngInd </item>
+        <item> @string/IngCom </item>
+        <item> @string/IngTele </item>
+        <item> @string/IngMec </item>
+        <item> @string/IngMecatro </item>
+        <item> @string/IngPetro </item>
+        <item> @string/IngAero </item>
+        <item> @string/IngGeo</item>
+        <item> @string/IngAmb</item>
+        <item> @string/IngGeoFis</item>
+        <item> @string/IngGeolo </item>
+        <item> @string/IngMM</item>
+        <item> @string/IngSB </item>
+
+
 
 
     </string-array>

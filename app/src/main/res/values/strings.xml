@@ -1,4 +1,39 @@
 <resources>
+    <!-- string de Activity_Main -->
     <string name="app_name">Formulario</string>
     <string name="Titulo">Ingrese los datos en el campo correspondiente, no dejar los campos en blanco</string>
+    <string name="Nombres_text">Nombre(s)</string>
+    <string name="Apellidos_text">Apellidos</string>
+    <string name="FechaNacimiento_text">Fecha de Nacimiento</string>
+    <string name="CorreoElectronico_text">Correo Electronico</string>
+    <string name="NCuenta_text">N° de cuenta</string>
+    <string name="Carrera_text">Carrera</string>
+    <string name="BotonEnviar_text">Enviar</string>
+
+    <!-- string del spinner de las carreras -->
+    <string name="IngCivil">Ingeniería Civil</string>
+    <string name="IngEE">Ingeniería Eléctrica Electrónica</string>
+    <string name="IngInd">Ingeniería Industrial</string>
+    <string name="IngCom">Ingeniería en Computación</string>
+    <string name="IngTele">Ingeniería en Telecomunicaciones</string>
+    <string name="IngMec">Ingeniería Mecánica</string>
+    <string name="IngMecatro">Ingeniería Mecatrónica</string>
+    <string name="IngPetro">Ingeniería Petrolera</string>
+    <string name="IngAero">Ingeniería Aeroespacial</string>
+    <string name="IngGeo">Ingeniería Geomática</string>
+    <string name="IngAmb">Ingeniería Ambiental</string>
+    <string name="IngGeoFis">Ingeniería Geofísica</string>
+    <string name="IngGeolo">Ingeniería Geológica</string>
+    <string name="IngMM">Ingeniería de Minas y Metalurgia</string>
+    <string name="IngSB">Ingeniería en Sistemas Biomédicos</string>
+    <!-- string de Activity_Result -->
+    <string name="nombre_result">Nombre: %1$s%2$s \n</string>
+    <string name="carrera_result">Carrera: %1$s\n</string>
+    <string name="edad_result">Edad: %1$s años cumplidos\n</string>
+    <string name="signo_zodiacal_result">Signo Zodiacal: %1$s \n</string>
+    <string name="horoscopo_chino_result">Horoscopo chino: %1$s \n</string>
+    <string name="correo_result">Correo: %1$s \n</string>
+    <string name="n_de_cuenta_result">N° de cuenta: %1$s \n</string>
+
+
 </resources>

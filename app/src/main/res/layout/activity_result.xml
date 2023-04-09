@@ -4,40 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#85C1E9 ">
+    android:background="#85C1E9 "
+    tools:context=".ResultActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="177dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:orientation="vertical"
             android:layout_margin="16dp"
-            >
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imageView2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/cheems" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_margin="16dp"
-                android:background="@drawable/background_withe">
+                android:background="@drawable/background_withe"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="4dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -46,17 +48,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
+                        android:text="@string/nombre_result"
                         android:textColor="@color/black"
-                        android:text="Nombre:\n" />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textCarrera"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Carrera:\n"
+                        android:text="@string/carrera_result"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -66,7 +68,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Edad:\n"
+                        android:text="@string/edad_result"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -76,7 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Signo Zodiacal:\n"
+                        android:text="@string/signo_zodiacal_result"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -86,7 +88,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Horoscopo chino:\n"
+                        android:text="@string/horoscopo_chino_result"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -96,7 +98,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Correo:\n"
+                        android:text="@string/correo_result"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -106,21 +108,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="N° de cuenta:\n"
+                        android:text="@string/n_de_cuenta_result"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
-
-
-                        android:text="TextView" />
                 </LinearLayout>
-
-
             </LinearLayout>
 
         </LinearLayout>
-
-
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
