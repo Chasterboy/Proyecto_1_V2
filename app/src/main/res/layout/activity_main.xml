@@ -8,140 +8,139 @@
         android:id="@+id/BotonEnviar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:background="#85C1E9 ">
 
 
-        <TextView
-            android:id="@+id/Titulo"
-            android:layout_width="370dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="36dp"
-            android:text="Ingrese los datos en el campo correspondiente, no dejar los campos en blanco"
-            android:textColor="#000000"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.636"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
 
-        <EditText
-            android:id="@+id/Apellidos_Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="Apellidos"
-            android:inputType="textPersonName"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nombre_Text" />
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_withe"
+                >
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/FechaNac_Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:calendarViewShown="false"
-            android:clickable="false"
-            android:datePickerMode="spinner"
-            android:ems="10"
-            android:focusable="false"
-            android:hint="Fecha de Nacimiento"
-            android:inputType="textPersonName"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Apellidos_Text" />
+                    <TextView
+                        android:id="@+id/Titulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ingrese los datos en el campo correspondiente, no dejar los campos en blanco"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/nombre_Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:hint="Nombre(s)"
-            android:inputType="textPersonName"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+                    <EditText
+                        android:id="@+id/nombre_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Nombre(s)"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enviar"
-            android:onClick="BEnviar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listview_carreras"
-            app:layout_constraintVertical_bias="0.598" />
+                    <EditText
+                        android:id="@+id/Apellidos_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ems="10"
+                        android:hint="Apellidos"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/listview_carreras"
-            android:layout_width="275dp"
-            android:layout_height="78dp"
-            android:layout_marginTop="28dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.264"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NoCuenta_Text"
-            />
+                    <EditText
+                        android:id="@+id/FechaNac_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:calendarViewShown="false"
+                        android:clickable="false"
+                        android:datePickerMode="spinner"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="Fecha de Nacimiento"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textCarr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:text="Carrera"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/listview_carreras"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NoCuenta_Text"
-            app:layout_constraintVertical_bias="1.0" />
+                    <EditText
+                        android:id="@+id/CorreoText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Correo Electronico"
+                        android:inputType="textEmailAddress"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/CorreoText"
-            android:layout_width="303dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="Correo Electronico"
-            android:inputType="textEmailAddress"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.342"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FechaNac_Text" />
+                    <EditText
+                        android:id="@+id/NoCuenta_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:digits="0123456789"
+                        android:ems="10"
+                        android:hint="N° Cuenta"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/NoCuenta_Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:digits="0123456789"
-            android:ems="10"
-            android:hint="N° Cuenta"
-            android:inputType="number"
-            android:maxLength="9"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.149"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CorreoText" />
+                    <TextView
+                        android:id="@+id/textCarr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+
+                        android:text="Carrera"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/listview_carreras"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:onClick="BEnviar"
+                        android:text="Enviar"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

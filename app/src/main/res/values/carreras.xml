@@ -9,8 +9,14 @@
         <item>Ingeniería Mecánica</item>
         <item>Ingeniería Mecatrónica</item>
         <item>Ingeniería Petrolera</item>
-        <item>Ingeniería Química</item>
-        <item>Ingeniería en Sistemas Automotrices</item>
-        <item>Ingeniería en Telemática</item>
+        <item>Ingeniería Aeroespacial</item>
+        <item>Ingeniería Geomática</item>
+        <item>Ingeniería Ambiental</item>
+        <item>Ingeniería Geofísica</item>
+        <item>Ingeniería Geológica</item>
+        <item>Ingeniería de Minas y Metalurgia</item>
+        <item>Ingeniería en Sistemas Biomédicos</item>
+
+
     </string-array>
 </resources>
