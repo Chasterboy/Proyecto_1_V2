@@ -25,6 +25,7 @@ class DatePickerFragment(val listener: (day:Int, month:Int, year:Int) -> Unit) :
         // Creamos el diálogo del selector de fecha con la fecha actual por defecto.
         val picker = DatePickerDialog(activity as Context, this, year, month, day)
         // Devolvemos el diálogo creado.
+        picker.datePicker.maxDate = c.timeInMillis
         return picker
     }
 }

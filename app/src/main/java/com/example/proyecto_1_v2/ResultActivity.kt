@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
@@ -82,6 +83,28 @@ class ResultActivity : AppCompatActivity() {
             else -> "Cabra"
         }
         Chino.text = getString(R.string.horoscopo_chino_result, signoChino)
+
+
+        val imageView = findViewById<ImageView>(R.id.imageCarrera)
+
+        when (carreraSeleccionada) {
+            "Ingeniería en Computación" -> imageView.setImageResource(R.drawable.computacion)
+            "Ingeniería Eléctrica Electrónica" -> imageView.setImageResource(R.drawable.electronico)
+            "Ingeniería Industrial" -> imageView.setImageResource(R.drawable.industrial)
+            "Ingeniería Civil" -> imageView.setImageResource(R.drawable.civil)
+            "Ingeniería en Telecomunicaciones" -> imageView.setImageResource(R.drawable.telecomunicaciones)
+            "Ingeniería Mecánica" -> imageView.setImageResource(R.drawable.mecanica)
+            "Ingeniería Mecatrónica" -> imageView.setImageResource(R.drawable.mecatronico)
+            "Ingeniería Petrolera" -> imageView.setImageResource(R.drawable.petrolero)
+            "Ingeniería Aeroespacial" -> imageView.setImageResource(R.drawable.aeroespacial)
+            "Ingeniería Geomática" -> imageView.setImageResource(R.drawable.geomatico)
+            "Ingeniería Ambiental" -> imageView.setImageResource(R.drawable.ambiental)
+            "Ingeniería Geofísica" -> imageView.setImageResource(R.drawable.geofisica)
+            "Ingeniería Geológica" -> imageView.setImageResource(R.drawable.geologia)
+            "Ingeniería de Minas y Metalurgia" -> imageView.setImageResource(R.drawable.minas)
+            "Ingeniería en Sistemas Biomédicos" -> imageView.setImageResource(R.drawable.biomedico)
+            else -> imageView.setImageResource(R.drawable.cheems)
+        }
 
 
     }
