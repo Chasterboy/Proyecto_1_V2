@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- string de Activity_Main -->
     <string name="app_name">Formulario</string>
@@ -34,6 +35,34 @@
     <string name="horoscopo_chino_result">Horoscopo chino: %1$s \n</string>
     <string name="correo_result">Correo: %1$s \n</string>
     <string name="n_de_cuenta_result">N° de cuenta: %1$s \n</string>
+    <!--Horoscopo chino-->
+    <string name="Mono">Mono </string>
+    <string name="Gallo">Gallo </string>
+    <string name="Perro">Perro </string>
+    <string name="Cerdo">Cerdo </string>
+    <string name="Rata">Rata </string>
+    <string name="Buey">Buey </string>
+    <string name="Tigre">Tigre </string>
+    <string name="Conejo">Conejo </string>
+    <string name="Dragon">Dragon </string>
+    <string name="Serpiente">Serpiente </string>
+    <string name="Caballo">Caballo </string>
+    <string name="Cabra">Cabra </string>
+    <!--Horoscopo Zodiacal-->
+    <string name="Aries">Aries</string>
+    <string name="Tauro">Tauro</string>
+    <string name="Geminis">Géminis</string>
+    <string name="Cancer">Cáncer</string>
+    <string name="Leo">Leo</string>
+    <string name="Virgo">Virgo</string>
+    <string name="Libra">Libra</string>
+    <string name="Escorpio">Escorpio</string>
+    <string name="Sagitario">Sagitario</string>
+    <string name="Capricornio">Capricornio</string>
+    <string name="Acuario">Acuario</string>
+    <string name="Piscis">Piscis</string>
+    <string name="autor">Autor: Juan Eduardo Rivera Perez</string>
+    <string name="version">Versión 1.0</string>
 
 
 </resources>

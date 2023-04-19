@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- string de Activity_Main -->
+    <string name="app_name">Form</string>
+    <string name="Titulo">Enter data in the corresponding field, do not leave fields blank</string>
+    <string name="Nombres_text">Name(s)</string>
+    <string name="Apellidos_text">Lastname</string>
+    <string name="FechaNacimiento_text">Birthdate</string>
+    <string name="CorreoElectronico_text">Email</string>
+    <string name="NCuenta_text">Account Number</string>
+    <string name="Carrera_text">Career</string>
+    <string name="BotonEnviar_text">Send</string>
+    <!-- string del spinner de las carreras -->
+    <string name="IngCivil">Civil Engineering</string>
+    <string name="IngEE">Electrical and Electronics Engineering</string>
+    <string name="IngInd">Industrial Engineering</string>
+    <string name="IngCom">Computer Engineering</string>
+    <string name="IngTele">Telecommunications Engineering</string>
+    <string name="IngMec">Mechanical Engineering</string>
+    <string name="IngMecatro">Mechatronics Engineering</string>
+    <string name="IngPetro">Petroleum Engineering</string>
+    <string name="IngAero">Aerospace Engineering</string>
+    <string name="IngGeo">Geomatics Engineering</string>
+    <string name="IngAmb">Environmental Engineering</string>
+    <string name="IngGeoFis">Geophysical Engineering</string>
+    <string name="IngGeolo">Geological Engineering</string>
+    <string name="IngMM">Mining and Metallurgical Engineering</string>
+    <string name="IngSB">Biomedical Systems Engineering</string>
+
+    <!-- string de Activity_Result -->
+    <string name="nombre_result">Name: %1$s %2$s \n</string>
+    <string name="carrera_result">Career: %1$s\n</string>
+    <string name="edad_result">Age: %1$s years old\n</string>
+    <string name="signo_zodiacal_result">Zodiac Sign: %1$s \n</string>
+    <string name="horoscopo_chino_result">Chinese Horoscope: %1$s \n</string>
+    <string name="correo_result">Email: %1$s \n</string>
+    <string name="n_de_cuenta_result">Account Number: %1$s \n</string>
+
+    <string name="Mono">Monkey</string>
+    <string name="Gallo">Rooster</string>
+    <string name="Perro">Dog</string>
+    <string name="Cerdo">Pig</string>
+    <string name="Rata">Rat</string>
+    <string name="Buey">Ox</string>
+    <string name="Tigre">Tiger</string>
+    <string name="Conejo">Rabbit</string>
+    <string name="Dragon">Dragon </string>
+    <string name="Serpiente">Snake</string>
+    <string name="Caballo">Horse</string>
+    <string name="Cabra">Goat</string>
+    <!--Zodiacal Horoscope-->
+    <string name="Aries">Aries</string>
+    <string name="Tauro">Taurus</string>
+    <string name="Geminis">Gemini</string>
+    <string name="Cancer">Cancer</string>
+    <string name="Leo">Leo</string>
+    <string name="Virgo">Virgo</string>
+    <string name="Libra">Libra</string>
+    <string name="Escorpio">Scorpio</string>
+    <string name="Sagitario">Sagittarius</string>
+    <string name="Capricornio">Capricorn</string>
+    <string name="Acuario">Aquarius</string>
+    <string name="Piscis">Pisces</string>
+
+    <string name="autor">Author: Juan Eduardo Rivera Perez</string>
+    <string name="version">Version 1.0</string>
+
+
+</resources>

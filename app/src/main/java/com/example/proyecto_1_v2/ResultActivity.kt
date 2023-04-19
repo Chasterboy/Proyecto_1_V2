@@ -61,7 +61,23 @@ class ResultActivity : AppCompatActivity() {
         FechaNacimiento.text = getString(R.string.edad_result, edad)
 
         // Calcular y mostrar el signo zodiacal en el TextView correspondiente
-        val signo = getSignoZodiacal(fechaNacimiento)
+
+        val dia = fechaNacimiento.dayOfMonth
+        val mes = fechaNacimiento.monthValue
+        val signo = when {
+            (dia >= 21 && mes == 3) || (dia <= 20 && mes == 4) -> getString(R.string.Aries)
+            (dia >= 21 && mes == 4) || (dia <= 21 && mes == 5) -> getString(R.string.Tauro)
+            (dia >= 22 && mes == 5) || (dia <= 21 && mes == 6) -> getString(R.string.Geminis)
+            (dia >= 22 && mes == 6) || (dia <= 23 && mes == 7) -> getString(R.string.Cancer)
+            (dia >= 24 && mes == 7) || (dia <= 23 && mes == 8) -> getString(R.string.Leo)
+            (dia >= 24 && mes == 8) || (dia <= 23 && mes == 9) -> getString(R.string.Virgo)
+            (dia >= 24 && mes == 9) || (dia <= 23 && mes == 10) -> getString(R.string.Libra)
+            (dia >= 24 && mes == 10) || (dia <= 22 && mes == 11) -> getString(R.string.Escorpio)
+            (dia >= 23 && mes == 11) || (dia <= 21 && mes == 12) -> getString(R.string.Sagitario)
+            (dia >= 22 && mes == 12) || (dia <= 20 && mes == 1) -> getString(R.string.Capricornio)
+            (dia >= 21 && mes == 1) || (dia <= 19 && mes == 2) -> getString(R.string.Acuario)
+            else -> getString(R.string.Piscis)
+        }
         Zodiaco.text = getString(R.string.signo_zodiacal_result, signo)
 
         // Obtener el año de nacimiento
@@ -69,18 +85,18 @@ class ResultActivity : AppCompatActivity() {
 
         // Calcular el signo del horóscopo chino y mostrarlo en el TextView correspondiente
         val signoChino = when (anioNacimiento % 12) {
-            0 -> "Mono"
-            1 -> "Gallo"
-            2 -> "Perro"
-            3 -> "Cerdo"
-            4 -> "Rata"
-            5 -> "Buey"
-            6 -> "Tigre"
-            7 -> "Conejo"
-            8 -> "Dragón"
-            9 -> "Serpiente"
-            10 -> "Caballo"
-            else -> "Cabra"
+            0 -> getString(R.string.Mono)
+            1 -> getString(R.string.Gallo)
+            2 -> getString(R.string.Perro)
+            3 -> getString(R.string.Cerdo)
+            4 -> getString(R.string.Rata)
+            5 -> getString(R.string.Buey)
+            6 -> getString(R.string.Tigre)
+            7 -> getString(R.string.Conejo)
+            8 -> getString(R.string.Dragon)
+            9 -> getString(R.string.Serpiente)
+            10 -> getString(R.string.Serpiente)
+            else -> getString(R.string.Cabra)
         }
         Chino.text = getString(R.string.horoscopo_chino_result, signoChino)
 
@@ -88,43 +104,24 @@ class ResultActivity : AppCompatActivity() {
         val imageView = findViewById<ImageView>(R.id.imageCarrera)
 
         when (carreraSeleccionada) {
-            "Ingeniería en Computación" -> imageView.setImageResource(R.drawable.computacion)
-            "Ingeniería Eléctrica Electrónica" -> imageView.setImageResource(R.drawable.electronico)
-            "Ingeniería Industrial" -> imageView.setImageResource(R.drawable.industrial)
-            "Ingeniería Civil" -> imageView.setImageResource(R.drawable.civil)
-            "Ingeniería en Telecomunicaciones" -> imageView.setImageResource(R.drawable.telecomunicaciones)
-            "Ingeniería Mecánica" -> imageView.setImageResource(R.drawable.mecanica)
-            "Ingeniería Mecatrónica" -> imageView.setImageResource(R.drawable.mecatronico)
-            "Ingeniería Petrolera" -> imageView.setImageResource(R.drawable.petrolero)
-            "Ingeniería Aeroespacial" -> imageView.setImageResource(R.drawable.aeroespacial)
-            "Ingeniería Geomática" -> imageView.setImageResource(R.drawable.geomatico)
-            "Ingeniería Ambiental" -> imageView.setImageResource(R.drawable.ambiental)
-            "Ingeniería Geofísica" -> imageView.setImageResource(R.drawable.geofisica)
-            "Ingeniería Geológica" -> imageView.setImageResource(R.drawable.geologia)
-            "Ingeniería de Minas y Metalurgia" -> imageView.setImageResource(R.drawable.minas)
-            "Ingeniería en Sistemas Biomédicos" -> imageView.setImageResource(R.drawable.biomedico)
+            getString(R.string.IngCivil) -> imageView.setImageResource(R.drawable.civil)
+            getString(R.string.IngEE) -> imageView.setImageResource(R.drawable.electronico)
+            getString(R.string.IngInd) -> imageView.setImageResource(R.drawable.industrial)
+            getString(R.string.IngCom) -> imageView.setImageResource(R.drawable.computacion)
+            getString(R.string.IngTele) -> imageView.setImageResource(R.drawable.telecomunicaciones)
+            getString(R.string.IngMec) -> imageView.setImageResource(R.drawable.mecanica)
+            getString(R.string.IngMecatro) -> imageView.setImageResource(R.drawable.mecatronico)
+            getString(R.string.IngPetro) -> imageView.setImageResource(R.drawable.petrolero)
+            getString(R.string.IngAero) -> imageView.setImageResource(R.drawable.aeroespacial)
+            getString(R.string.IngGeo) -> imageView.setImageResource(R.drawable.geomatico)
+            getString(R.string.IngAmb) -> imageView.setImageResource(R.drawable.ambiental)
+            getString(R.string.IngGeoFis) -> imageView.setImageResource(R.drawable.geofisica)
+            getString(R.string.IngGeolo) -> imageView.setImageResource(R.drawable.geologia)
+            getString(R.string.IngMM) -> imageView.setImageResource(R.drawable.minas)
+            getString(R.string.IngSB) -> imageView.setImageResource(R.drawable.biomedico)
             else -> imageView.setImageResource(R.drawable.cheems)
         }
 
 
-    }
-}
-@RequiresApi(Build.VERSION_CODES.O)
-fun getSignoZodiacal(fechaNacimiento: LocalDate): String {
-    val dia = fechaNacimiento.dayOfMonth
-    val mes = fechaNacimiento.monthValue
-    return when {
-        (dia >= 21 && mes == 3) || (dia <= 20 && mes == 4) -> "Aries"
-        (dia >= 21 && mes == 4) || (dia <= 21 && mes == 5) -> "Tauro"
-        (dia >= 22 && mes == 5) || (dia <= 21 && mes == 6) -> "Géminis"
-        (dia >= 22 && mes == 6) || (dia <= 23 && mes == 7) -> "Cáncer"
-        (dia >= 24 && mes == 7) || (dia <= 23 && mes == 8) -> "Leo"
-        (dia >= 24 && mes == 8) || (dia <= 23 && mes == 9) -> "Virgo"
-        (dia >= 24 && mes == 9) || (dia <= 23 && mes == 10) -> "Libra"
-        (dia >= 24 && mes == 10) || (dia <= 22 && mes == 11) -> "Escorpio"
-        (dia >= 23 && mes == 11) || (dia <= 21 && mes == 12) -> "Sagitario"
-        (dia >= 22 && mes == 12) || (dia <= 20 && mes == 1) -> "Capricornio"
-        (dia >= 21 && mes == 1) || (dia <= 19 && mes == 2) -> "Acuario"
-        else -> "Piscis"
     }
 }
