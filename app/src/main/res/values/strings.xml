@@ -28,9 +28,14 @@
     <string name="IngMM">Ingeniería de Minas y Metalurgia</string>
     <string name="IngSB">Ingeniería en Sistemas Biomédicos</string>
     <!-- string de Activity_Result -->
-    <string name="nombre_result">Nombre: %1$s%2$s \n</string>
+    <string name="nombre_result">Nombre: %1$s %2$s \n</string>
     <string name="carrera_result">Carrera: %1$s\n</string>
-    <string name="edad_result">Edad: %1$s años cumplidos\n</string>
+    <!-- <string name="edad_result">Edad: %1$s años cumplidos\n</string>-->
+    <plurals name="edad_result">
+        <item quantity="one">Edad: %1$d año cumplido\n</item>
+        <item quantity="other">Edad: %1$d años cumplidos\n</item>
+    </plurals>
+
     <string name="signo_zodiacal_result">Signo Zodiacal: %1$s \n</string>
     <string name="horoscopo_chino_result">Horoscopo chino: %1$s \n</string>
     <string name="correo_result">Correo: %1$s \n</string>

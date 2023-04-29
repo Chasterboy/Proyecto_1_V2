@@ -58,7 +58,7 @@ class ResultActivity : AppCompatActivity() {
         val edad = Period.between(fechaNacimiento, fechaActual).years
 
         // Mostrar la edad en el TextView correspondiente
-        FechaNacimiento.text = getString(R.string.edad_result, edad)
+        FechaNacimiento.text = resources.getQuantityString(R.plurals.edad_result, edad, edad);
 
         // Calcular y mostrar el signo zodiacal en el TextView correspondiente
 

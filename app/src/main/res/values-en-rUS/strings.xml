@@ -30,8 +30,10 @@
     <!-- string de Activity_Result -->
     <string name="nombre_result">Name: %1$s %2$s \n</string>
     <string name="carrera_result">Career: %1$s\n</string>
-    <string name="edad_result">Age: %1$s years old\n</string>
-    <string name="signo_zodiacal_result">Zodiac Sign: %1$s \n</string>
+    <plurals name="edad_result">
+        <item quantity="one">Age: %1$s year old\n</item>
+        <item quantity="other">Age: %1$s years old\n</item>
+    </plurals>    <string name="signo_zodiacal_result">Zodiac Sign: %1$s \n</string>
     <string name="horoscopo_chino_result">Chinese Horoscope: %1$s \n</string>
     <string name="correo_result">Email: %1$s \n</string>
     <string name="n_de_cuenta_result">Account Number: %1$s \n</string>
